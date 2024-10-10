@@ -2,12 +2,25 @@
 
 ## Table des matières
 
-1. [Introduction](#introduction)
-2. [Architecture du Système](#architecture-du-système)
+1. [Membres du projet](#membres-du-projet)
+2. [Introduction](#introduction)
+3. [Architecture du Système](#architecture-du-système)
    - [Composants](#composants)
-3. [Étapes de Configuration](#étapes-de-configuration)
-4. [Instructions pour Exécuter le Projet](#instructions-pour-exécuter-le-projet)
-5. [Conclusion](#conclusion)
+4. [Étapes de Configuration](#étapes-de-configuration)
+5. [Instructions pour Exécuter le Projet](#instructions-pour-exécuter-le-projet)
+6. [Conclusion](#conclusion)
+
+## Membres du projet
+
+Nous sommes 5 étudiants de 5A FISA à l'ESIEA de Laval
+
+| Nom      | Prénom |
+|----------|--------|
+| Dalle    | Alexis |
+| Ladislas | Albin  |
+| Lambert  | Matéo  |
+| Louis    | Lenny  |
+| Ménard   | Malo   |
 
 ## Introduction
 
