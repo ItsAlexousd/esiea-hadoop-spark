@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+  hadoop-master:
+    build:
+      context: ./hadoop/master
+    container_name: hadoop-master
+    hostname: hadoop-master
+    platform: linux/amd64
+    networks:
+      - hadoop
+    ports:
+      - '9870:9870' # HDFS web UI
+      - '8088:8088' # YARN ResourceManager
+      - '7077:7077' # Spark master
+      - '16010:16010' # HBase Master UI
+    volumes:
+      - ./hadoop/master/data:/data
+      - spark-output:/home/root/spark_jobs_output
+    stdin_open: true
+    tty: true
+
+  hadoop-worker1:
+    build:
+      context: ./hadoop/worker
+    container_name: hadoop-worker1
+    hostname: hadoop-worker1
+    platform: linux/amd64
+    networks:
+      - hadoop
+    ports:
+      - '8040:8042' # YARN NodeManager (worker 1)
+    stdin_open: true
+    tty: true
+
+  hadoop-worker2:
+    build:
+      context: ./hadoop/worker
+    container_name: hadoop-worker2
+    hostname: hadoop-worker2
+    platform: linux/amd64
+    networks:
+      - hadoop
+    ports:
+      - '8041:8042' # YARN NodeManager (worker 2)
+    stdin_open: true
+    tty: true
+
+  app:
+    build:
+      context: ./app
+    container_name: app
+    hostname: app
+    networks:
+      - hadoop
+    ports:
+      - '3000:3000' # Port de l'application Express
+    volumes:
+      - spark-output:/usr/src/app/spark_jobs_output
+    stdin_open: true
+    tty: true
+
+volumes:
+  spark-output:
+
+networks:
+  hadoop:
+    driver: bridge

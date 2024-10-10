@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb Explorer NYC</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Airbnb Explorer NYC</h1>
+
+      <div class="job-container" id="averagePriceByNeighborhood">
+        <h2>Prix moyen par quartier</h2>
+        <canvas id="chart1"></canvas>
+        <div class="loader" id="loader1"></div>
+        <p class="no-data" id="noData1">
+          Les données ne sont pas encore disponibles.
+        </p>
+        <button class="retry-btn" id="retry1">Réessayer</button>
+        <button class="export-btn" id="exportPdf1" style="display: none">
+          Exporter en PDF
+        </button>
+        <button class="export-btn" id="exportCsv1" style="display: none">
+          Exporter en CSV
+        </button>
+      </div>
+
+      <div class="job-container" id="averagePriceByRoomType">
+        <h2>Prix moyen par type de chambre</h2>
+        <canvas id="chart2"></canvas>
+        <div class="loader" id="loader2"></div>
+        <p class="no-data" id="noData2">
+          Les données ne sont pas encore disponibles.
+        </p>
+        <button class="retry-btn" id="retry2">Réessayer</button>
+        <button class="export-btn" id="exportPdf2" style="display: none">
+          Exporter en PDF
+        </button>
+        <button class="export-btn" id="exportCsv2" style="display: none">
+          Exporter en CSV
+        </button>
+      </div>
+
+      <div class="job-container" id="countListingsByNeighborhood">
+        <h2>Nombre d'annonces par quartier</h2>
+        <canvas id="chart3"></canvas>
+        <div class="loader" id="loader3"></div>
+        <p class="no-data" id="noData3">
+          Les données ne sont pas encore disponibles.
+        </p>
+        <button class="retry-btn" id="retry3">Réessayer</button>
+        <button class="export-btn" id="exportPdf3" style="display: none">
+          Exporter en PDF
+        </button>
+        <button class="export-btn" id="exportCsv3" style="display: none">
+          Exporter en CSV
+        </button>
+      </div>
+
+      <div class="job-container" id="countListingsByPriceRange">
+        <h2>Nombre d'annonces par plage de prix</h2>
+        <canvas id="chart4"></canvas>
+        <div class="loader" id="loader4"></div>
+        <p class="no-data" id="noData4">
+          Les données ne sont pas encore disponibles.
+        </p>
+        <button class="retry-btn" id="retry4">Réessayer</button>
+        <button class="export-btn" id="exportPdf4" style="display: none">
+          Exporter en PDF
+        </button>
+        <button class="export-btn" id="exportCsv4" style="display: none">
+          Exporter en CSV
+        </button>
+      </div>
+
+      <div class="job-container" id="topHostsByTotalListings">
+        <h2>Meilleurs hôtes par nombre d'annonces</h2>
+        <canvas id="chart5"></canvas>
+        <div class="loader" id="loader5"></div>
+        <p class="no-data" id="noData5">
+          Les données ne sont pas encore disponibles.
+        </p>
+        <button class="retry-btn" id="retry5">Réessayer</button>
+        <button class="export-btn" id="exportPdf5" style="display: none">
+          Exporter en PDF
+        </button>
+        <button class="export-btn" id="exportCsv5" style="display: none">
+          Exporter en CSV
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
